@@ -9,9 +9,6 @@ provider:
   runtime: nodejs12.x
   lambdaHashingVersion: "20201221"
   stage: dev
-  environment:
-    NAME: ${NAME:NAME}
-    AGE: ${AGE:AGE}
 
 functions:
   api:
@@ -23,3 +20,6 @@ functions:
       - http:
           path: /{proxy+}
           method: ANY
+    environment:
+      NAME: ${param:NAME}
+      AGE: ${param:AGE}
