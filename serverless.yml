@@ -2,9 +2,6 @@ org: sampreethamith65
 app: ci-cd-express-api
 service: ci-cd-express-api
 
-plugins:
-  - serverless-dotenv-plugin
-
 frameworkVersion: "2"
 
 provider:
@@ -12,6 +9,9 @@ provider:
   runtime: nodejs12.x
   lambdaHashingVersion: "20201221"
   stage: dev
+  environment:
+    NAME: ${NAME}
+    AGE: ${AGE}
 
 functions:
   api:

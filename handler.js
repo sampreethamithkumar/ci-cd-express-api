@@ -4,7 +4,7 @@ const app = express();
 
 app.get("/", (req, res, next) => {
   return res.status(200).json({
-    message: `Hello world! changes made by ${process.env.NAME}`,
+    message: `Hello world! changes made by ${process.env.NAME} of age ${process.env.age}`,
   });
 });
 
