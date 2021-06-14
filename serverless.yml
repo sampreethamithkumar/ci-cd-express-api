@@ -10,8 +10,8 @@ provider:
   lambdaHashingVersion: "20201221"
   stage: dev
   environment:
-    NAME: ${NAME}
-    AGE: ${AGE}
+    NAME: ${NAME: NAME}
+    AGE: ${AGE: AGE}
 
 functions:
   api:
